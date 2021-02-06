@@ -5,7 +5,7 @@ const form = document.getElementById("formLogin")
          async function hendler(event){
         event.preventDefault();
         console.log(event.target.email.value);
-		 const f = await fetch("https://tatev5.github.io/BestChoice/login", {
+		 const f = await fetch("https://tatev5.github.io/BestChoiceNode/login", {
             method: "POST",
 			  headers: {
 				'Accept': 'application/json, text/plain, */*',
@@ -33,7 +33,7 @@ const form = document.getElementById("formLogin")
 
        async function formSignup(ev){
       
-            const fs = await  fetch("https://tatev5.github.io/BestChoice/signup", {
+            const fs = await  fetch("https://tatev5.github.io/BestChoiceNode/signup", {
                 method: "POST",
                   headers: {
                     'Accept': 'application/json, text/plain, */*',
