@@ -1,26 +1,35 @@
-const formLog = document.getElementById("formLogin");
 const formSign = document.getElementById("formSignup");
 
-       async function formLogin(event){
+const form = document.getElementById("formLogin")
+;
+         async function hendler(event){
         event.preventDefault();
         console.log(event.target.email.value);
-         const f = await  fetch("https://tatev5.github.io/BestChoice/login", {
+		 const f = await fetch("https://tatev5.github.io/BestChoice/login", {
             method: "POST",
 			  headers: {
 				'Accept': 'application/json, text/plain, */*',
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({email: event.target.email.value, password: event.target.password.value})
-​
-          }).then(res=>res.json())
-			.then(res => console.log(res));
+			body: JSON.stringify(
+        {
+          email: event.target.email.value, 
+          password: event.target.password.value
+        })
+      
+    });
+ 
+        let result = await f.json();
+        if(result.token){
+          redirect(account);
+        }
        }
-       formLog.addEventListener("submit", formLogin);
-
-
-
+       form.addEventListener("submit", hendler);
        
-    
+
+
+
+
 
        async function formSignup(ev){
       
@@ -35,12 +44,17 @@ const formSign = document.getElementById("formSignup");
                         lastname: ev.target.lastname.value,
                         email: ev.target.email.value, 
                         password: ev.target.password.value,
-                        confirmPass:ev.target.cconfirmPassword.value
+
+                       
                     })
     ​
-              }).then(res=>res.json())
-                .then(res => console.log(res));
-                
+              })
+
+              let result = await fs.json();
+              if(result.token){
+                localStorage.setItem('authorization', JSON.stringify(result.token));
+                redirect(account);
+                     }
          
         }
         
