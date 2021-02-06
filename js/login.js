@@ -33,7 +33,7 @@ const form = document.getElementById("formLogin")
 
        async function formSignup(ev){
       
-            const fs = await  fetch("https://tatev5.github.io/BestChoiceNode/signup", {
+            const fs = await  fetch("https://tatev5.github.io/BestChoiceNode/users/signup", {
                 method: "POST",
                   headers: {
                     'Accept': 'application/json, text/plain, */*',
