@@ -8,7 +8,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 
-app.use(express.static(path.join(__dirname, './public')));
+app.use(path.join(__dirname, './public'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
