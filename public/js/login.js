@@ -2,8 +2,8 @@ const formSign = document.getElementById("formSignup");
 
 const form = document.getElementById("formLogin")
 
-         async function hendler(event){
-        event.preventDefault();
+         async function hendler(event,res){
+          event.preventDefault();
 		 const f = await fetch("https://bestchoicenode.herokuapp.com/users/login", {
             method: "POST",
 			  headers: {
@@ -20,12 +20,16 @@ const form = document.getElementById("formLogin")
    
    
        let result = await f.json();
-		  if(result.message === 'okey')  {
+
+       if(result.message === 'okey')  {
         localStorage.setItem('authorization',result.token)
         window.location.href = 'account.html'
          } 
 		  
-     
+        
+       
+		  
+
      
        }
     form.addEventListener("submit", hendler);
