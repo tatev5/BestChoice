@@ -21,7 +21,7 @@ const form = document.getElementById("formLogin")
    
        let result = await f.json();
 		  if(result.message === 'okey')  {
-        localStorage.setItem('authorization',result)
+        localStorage.setItem('authorization',result.token)
         window.location.href = 'account.html'
          } 
 		  
