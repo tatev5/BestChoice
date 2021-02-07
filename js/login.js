@@ -21,7 +21,7 @@ const form = document.getElementById("formLogin")
  
         let result = await f.json();
         if(result.token){
-		return res.redirect('http://google.com');
+		return redirect('/account');
         
         }
        }
@@ -54,7 +54,7 @@ const form = document.getElementById("formLogin")
               let result = await fs.json();
               if(result.token){
                 localStorage.setItem('authorization', JSON.stringify(result.token));
-               retrun res.redirect('http://google.com');
+               retrun redirect('/account');
                      }
          
         }
