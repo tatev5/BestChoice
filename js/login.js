@@ -1,7 +1,7 @@
 const formSign = document.getElementById("formSignup");
 
 const form = document.getElementById("formLogin")
-;
+
          async function hendler(event){
         event.preventDefault();
         console.log(event.target.email.value);
