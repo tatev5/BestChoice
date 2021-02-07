@@ -3,8 +3,7 @@ const formSign = document.getElementById("formSignup");
 const form = document.getElementById("formLogin")
 
          async function hendler(event){
-        event.preventDefault();
-        console.log(event.target.email.value);
+      
 		 const f = await fetch("https://bestchoicenode.herokuapp.com/users/login", {
             method: "POST",
 			  headers: {
@@ -21,7 +20,7 @@ const form = document.getElementById("formLogin")
    
    
        let result = await f.json();
-		
+		console.log(result)
 		  if(result){
 		 localStorage.setItem('auth',result)
 		  }
