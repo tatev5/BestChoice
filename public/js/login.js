@@ -21,7 +21,7 @@ const form = document.getElementById("formLogin")
    
    
        let result = await f.json();
-		  console.log(result);
+		
 		  if(result){
 		 localStorage.setItem('auth',result)
 		  }
