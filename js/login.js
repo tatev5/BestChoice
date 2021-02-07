@@ -19,11 +19,11 @@ const form = document.getElementById("formLogin")
       
     });
  
-        let result = await f.json();
-        if(result.token){
-		return redirect('/account');
-        
-        }
+       let result = await f.json();
+		  console.log(result);
+		  if(result){
+		  console.log("yes")
+		  }
        }
        form.addEventListener("submit", hendler);
        
