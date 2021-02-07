@@ -6,7 +6,7 @@ const navBar = document.getElementById("navBar")
             headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
-            authorization: token
+            
         },
         });
              
