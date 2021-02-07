@@ -3,11 +3,16 @@ const navBar = document.getElementById("navBar")
     async function hendler(){
         const f = await fetch("https://tatev5.github.io/BestChoice/account", {
         method: "GET",
-            headers: {
+                headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
-            
+ 
         },
+        body: JSON.stringify(
+            {
+              authorization: localStorage.getItem("authorization")
+            })
+            
         });
              
               let result = f.json();
