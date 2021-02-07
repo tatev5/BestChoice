@@ -3,7 +3,7 @@ const formSign = document.getElementById("formSignup");
 const form = document.getElementById("formLogin")
 
          async function hendler(event){
-      
+        event.preventDefault();
 		 const f = await fetch("https://bestchoicenode.herokuapp.com/users/login", {
             method: "POST",
 			  headers: {
