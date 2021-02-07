@@ -20,10 +20,11 @@ const form = document.getElementById("formLogin")
    
    
        let result = await f.json();
-		console.log(result)
-		  if(result){
-		 localStorage.setItem('auth',result)
-		  }
+		  if(result.message === 'okey')  {
+        localStorage.setItem('authorization',result)
+        window.location.href = 'account.html'
+         } 
+		  
      
      
        }
