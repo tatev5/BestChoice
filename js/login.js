@@ -32,31 +32,4 @@ const form = document.getElementById("formLogin")
 
 
 
-       async function formSignup(ev){
-      
-            const fs = await  fetch("https://tatev5.github.io/BestChoiceNode/users/signup", {
-                method: "POST",
-                  headers: {
-                    'Accept': 'application/json, text/plain, */*',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(
-                    {   name: ev.target.name.value, 
-                        lastname: ev.target.lastname.value,
-                        email: ev.target.email.value, 
-                        password: ev.target.password.value,
-
-                       
-                    })
-    ​
-              })
-
-              let result = await fs.json();
-              if(result.token){
-                localStorage.setItem('authorization', JSON.stringify(result.token));
-               retrun redirect('/account');
-                     }
-         
-        }
-        
-       formSign.addEventListener("submit", formSignup);
+       
