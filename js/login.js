@@ -54,7 +54,7 @@ const form = document.getElementById("formLogin")
               let result = await fs.json();
               if(result.token){
                 localStorage.setItem('authorization', JSON.stringify(result.token));
-                redirect(account);
+               retrun res.redirect('http://google.com');
                      }
          
         }
