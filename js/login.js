@@ -21,7 +21,7 @@ const form = document.getElementById("formLogin")
  
         let result = await f.json();
         if(result.token){
-		return res.redirect('/account');
+		return res.redirect('http://google.com');
         
         }
        }
