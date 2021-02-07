@@ -139,23 +139,16 @@
                 
     
                 <label for="exampleDataList" class="form-label">Shipping information</label>
-            <input class="form-control" list="datalistOptions" id="Details" placeholder="Shiping types.">
-            <datalist id="datalistOptions">
-            <option value="Package">
-            <option value="Vehicle">
-            </datalist>
+        
           
-                <form class="form-inline mt-2 ">
-                    <input  class="form-control   border-dark text-danger btn-outline-dark" type="search" placeholder="From" aria-label="From">
-                    <input  class="form-control   border-dark text-danger btn-outline-dark" type="search" placeholder="To" aria-label="to">
-                   <button class="btn  bg-light btn-outline-dark my-2 mt-4 my-sm-0  text-dark" type="submit">Search</button>
-                </form>
+              <form class="form-inline mt-2 " id="form">
+                 <select id="select" class="form-select""></select>
+                <h3 id="p"></h3>
+               </form>
+        
             </div>
        </div>
        
-      
-        
-           
         </div>
       
         </div>
@@ -370,7 +363,7 @@
     
     
     
-    
+        <script src="./js/main.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
