@@ -72,7 +72,31 @@
     
     
     
-<script src='../js/login.js'></script>
+<script>
+    const usersTable = document.getElementById("usersInfo");
+       const form = document.getElementById("formLogin");
+         async function hendler(event){
+        event.preventDefault();
+        console.log(event.target.email.value);
+         const f = await fetch("https://bestchoicenode.herokuapp.com/users/login", {
+            method: "POST",
+              headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({email: event.target.email.value, password: event.target.password.value})
+           
+            
+          });
+          
+          let result = await f.json();
+          console.log(result);
+          if(result){
+          console.log("yes")
+          }
+          
+       }
+</script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
