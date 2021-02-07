@@ -21,7 +21,8 @@ const form = document.getElementById("formLogin")
  
         let result = await f.json();
         if(result.token){
-          redirect(account);
+		return res.redirect('/account');
+        
         }
        }
        form.addEventListener("submit", hendler);
