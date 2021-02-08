@@ -24,7 +24,10 @@ const form = document.getElementById("formLogin")
        if(result.message === 'okey')  {
         localStorage.setItem('authorization',result.token)
         window.location.href = 'account.html'
-         } 
+         } else{
+          window.location.href = 'error.html'
+         }
+          
 		  
         
        
