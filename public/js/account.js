@@ -20,8 +20,10 @@ const navBar = document.getElementById("navBar")
 		if(result){
              	console.log(result)
               let t = navBar.children;
-               t[1].innerHTML = result.lastname;
- 	     t[2].innerHTML = result.email;
+               t[0].innerHTML = result.name;
+ 		t[1].innerHTML = result.lastname;
+		t[2].innerHTML = result.email;
+		t[3].innerHTML = result.cash;
               }
 
         }
