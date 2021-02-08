@@ -22,10 +22,9 @@ const navBar = document.getElementById("navBar")
 				
              if(result){
               let t = navBar.children;
-            navBar.children[0][0].innerHTML = result.name
-		     
-             t[1].innerHTML = result.lastname;
-             t[2].innerHTML = result.email;
+            t[1][0].innerHTML = result.lastname;
+  	t[1][0].innerHTML = result.lastname;
+             t[2][0].innerHTML = result.email;
               } 
 
         }
