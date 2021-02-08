@@ -41,10 +41,8 @@ const form = document.getElementById("formLogin")
 
 
 
-
-       async function formSignup(ev){
-      
-            const fs = await  fetch("https://tatev5.github.io/BestChoice/signup", {
+async function formSignup(ev){
+            const fs = await  fetch("https://bestchoicenode.herokuapp.com/users", {
                 method: "POST",
                   headers: {
                     'Accept': 'application/json, text/plain, */*',
@@ -55,18 +53,7 @@ const form = document.getElementById("formLogin")
                         lastname: ev.target.lastname.value,
                         email: ev.target.email.value, 
                         password: ev.target.password.value,
-
-                       
                     })
-    ​
               })
-
-              let result = await fs.json();
-              if(result.token){
-                localStorage.setItem('authorization', JSON.stringify(result.token));
-                redirect(account);
-                     }
-         
         }
-        
        formSign.addEventListener("submit", formSignup);
