@@ -4,7 +4,7 @@ var path = require('path');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const cityRoutes = require('./routes/cityRoutes');
+
 
 
 var app = express();
@@ -13,7 +13,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, './public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/submit', cityRoutes);
+
 
 
 
