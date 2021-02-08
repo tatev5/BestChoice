@@ -16,6 +16,7 @@ const navBar = document.getElementById("navBar")
         });
              
               let result = f.json();
+        console.log(result)
               if(result){
               let t = navBar.children;
              t[0].innerHTML = result.name;
