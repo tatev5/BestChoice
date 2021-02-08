@@ -2,7 +2,7 @@ const navBar = document.getElementById("navBar")
 
     async function hendler(){
         const f = await fetch("https://tatev5.github.io/BestChoice/auth", {
-        method: "GET",
+        method: "POST",
                 headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
