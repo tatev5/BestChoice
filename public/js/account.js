@@ -17,15 +17,13 @@ const navBar = document.getElementById("navBar")
              
             let result = await f.json();
 				
-                
-             
-				
-             if(result){
+		if(result){
+             	console.log(result)
               let t = navBar.children;
-            t[0][0].innerHTML = result.name;
-  	t[1][0].innerHTML = result.lastname;
-             t[2][0].innerHTML = result.email;
-              } 
+                t[0][0].innerHTML = result.name;
+  	            t[1][0].innerHTML = result.lastname;
+				 t[2][0].innerHTML = result.email;
+              }
 
         }
        
