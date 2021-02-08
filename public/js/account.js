@@ -15,14 +15,11 @@ const navBar = document.getElementById("navBar")
             
         });
              
-              let result = f.json();
-        console.log(result)
+            let result = await f.json();
+				
               if(result){
-              let t = navBar.children;
-             t[0].innerHTML = result.name;
-             t[1].innerHTML = result.lastname;
-             t[2].innerHTML = result.cash;
-              }
+              console.log(result);
+              } 
 
         }
        
