@@ -1,7 +1,7 @@
 const navBar = document.getElementById("navBar")
 
     async function hendler(){
-        const f = await fetch("https://tatev5.github.io/BestChoice/account", {
+        const f = await fetch("https://tatev5.github.io/BestChoice/auth", {
         method: "GET",
                 headers: {
             'Accept': 'application/json, text/plain, */*',
