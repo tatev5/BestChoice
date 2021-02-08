@@ -1,4 +1,4 @@
-const formSign = document.getElementById("formSignup");
+const formSign = document.getElementById("formSign");
 
 const form = document.getElementById("formLogin")
 
